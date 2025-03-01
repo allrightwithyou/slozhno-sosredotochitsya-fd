@@ -1,5 +1,150 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  inline-size: 375px;
+  gap:40px;
+  
+  background-image: var(--bg-image);
+  background-attachment: fixed;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+.header{
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:192px 192px min-content;
+  gap:55px;
+  
+  
+}
+
+.title{
+  
+  font-family: IBM Plex Mono;
+  font-weight: 700;
+  font-size: 116px;
+  line-height: 95.7px;
+  letter-spacing: 0%;
+  color: var(--tittle-color);
+  text-shadow: 4px 4px 0px var(--color-shadow);
+
+}
+.rec{
+  display: block;
+  width: 52px;
+  height: 26px;
+  position: absolute;
+  justify-self: flex-end;
+}
+
+.header__theme-menu{
+  margin-block-start:75px;
+  justify-self: end;
+  align-self: flex-end;
+  margin-block-end: 10px;
+  
+}
+
+.header__theme-menu-list{
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap:10px;
+}
+
+.header__theme-menu-button{
+  border:0;
+  width: 70px;
+  height: 26px;
+  padding-bottom: 3px;
+  font-family: IBM Plex Mono;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: center;
+  color:var(--button-color);
+  background-color: transparent;
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button{
+  border: 1px solid;
+}
+
+.header__title{
+  justify-self: start;
+}
+
+.post-title{
+  font-family: IBM Plex Mono;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  letter-spacing: 0%;
+  color:var(--color-post-title);
+  background-color: var(--color-bg-post-title);
+
+}
+.header__post-title{
+  margin-bottom: 56px;
+}
+.main__content{
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  gap:50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.section__title{
+  font-family: IBM Plex Mono;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  letter-spacing: 0%;
+  color:var(--section-color);
+  margin-bottom: 20px;
+}
+
+.section__content{
+  font-family: IBM Plex Mono;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+  letter-spacing: 0%;
+  color:var(--section-content-color);
+  margin-top: 10px;
+}
+.section__list{
+  display: grid;
+  gap:20px;
+}
+.section__card-image{
+  width: 355px;
+  grid-auto-flow: row dense;
+}
+.section__card-image-title{
+  margin-bottom: 10px;
+}
+.section__list-card{
+  display: grid;
+  gap:10px;
+  grid-template-rows: 142px 1fr 237px 1fr;
+}
+.image{
+  inline-size: 100%;
+  block-size: 100%;
+  max-block-size: 100%;
+  object-fit: cover;
+}
+.footer{
+  display: flex;
+  align-self: center;
+  justify-self: center;
 }
