@@ -12,8 +12,9 @@
   --color-post-title:#000028;
   --color-bg-post-title:#FF0070;
   --section-color:#FF0070;
-  
+  --accent-color:#FF0070;
   --section-content-color:#F1B2CE;
+  --color-decor:#FF0070;
 
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
