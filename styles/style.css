@@ -6,44 +6,30 @@
   grid-template-rows: 1fr min-content 1fr;
   max-width: 1024px;
   min-width: 355px;
-  gap:40px;
+  gap:var(--page-gap);
   height: 100%;
-  background-image: var(--bg-image);
   background-attachment: fixed;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: var(--font), sans-serif;
+  background-image: var(--bg-image);
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 
 .header{
   padding: 10px;
   display: grid;
-  
   grid-template-rows:repeat(5, min-content);
   
-  
 }
 
-
-
-
-.title{
-  font-family: IBM Plex Mono;
-  font-weight: 700;
-  font-size: 116px;
-  line-height: 95.7px;
-  letter-spacing: 0%;
-  color: var(--tittle-color);
-  text-shadow: 4px 4px 0px var(--color-shadow);
-}
 .rec{
   display: block;
   width: 52px;
   height: 26px;
   position: absolute;
   justify-self: flex-end;
-  font-family: IBM Plex Mono;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
@@ -64,12 +50,20 @@
   box-shadow: 0px 0px 4px 2px var(--accent-color);
 }
 
+.title{
+  font-weight: var(--font-title);
+  font-size: var(--font-size-title);
+  line-height: var(--font-line-height-title);
+  letter-spacing: 0%;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0px var(--color-shadow);
+}
+
 .header__theme-menu{
   margin-block-start:40px;
   justify-self: end;
   align-self: flex-end;
   margin-block-end: 10px;
-  
 }
 
 .header__theme-menu-list{
@@ -83,30 +77,44 @@
   width: 70px;
   height: 26px;
   padding-bottom: 3px;
-  font-family: IBM Plex Mono;
   font-weight: 400;
-  font-size: 18px;
+  font-size: var(--font-size);
   line-height: 18px;
-  letter-spacing: 0%;
   text-align: center;
   color:var(--button-color);
   background-color: transparent;
   text-transform: lowercase;
+  cursor: pointer;
 }
 
-
-.header__theme-menu-button:active{
-  border: 1px solid;
+.header__theme-menu-button:hover{
+  border:1px solid var(--hover-color);
 }
+
+.header__theme-menu-button:focus{
+  border-bottom: 1px solid var(--button-color);
+}
+
+.link:hover{
+  text-decoration:underline;
+}
+.link:focus{
+  border: 1px solid var(--focus-color);
+}
+
+.header__theme-menu-button_active{
+  border:1px solid;
+  pointer-events: none;
+}
+
 .header__title{
   justify-self: start;
   margin-top: 55px;
 }
 
 .title-decor{
-  font-family: IBM Plex Mono;
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: var(--font-title);
+  font-size: var(--font-size);
   line-height: 23.4px;
   letter-spacing: 0%;
   color:var(--color-post-title);
@@ -127,9 +135,8 @@
   padding-right: 10px;
 }
 .section__title{
-  font-family: IBM Plex Mono;
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: var(--font-title);
+  font-size: var(--font-size);
   line-height: 23.4px;
   letter-spacing: 0%;
   color:var(--section-color);
@@ -137,13 +144,21 @@
 }
 
 .section__content{
-  font-family: IBM Plex Mono;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: var(--font-content);
+  font-size: var(--font-size);
   line-height: 23.4px;
   letter-spacing: 0%;
   color:var(--section-content-color);
   margin-top: 10px;
+}
+
+.not-fat{
+  font-weight: var(--font-content);
+}
+
+.link{
+  text-decoration: none;
+  text-shadow: 2px 1px 0 var(--color-shadow);
 }
 
 .section__list{
@@ -161,7 +176,6 @@
 }
 
 .section__card-list{
-  
   display: grid;
   gap:10px;
   grid-template-rows: repeat(5,min-content);
@@ -181,8 +195,8 @@
 }
 .sunset{
   min-height: 142px;
-  
 }
+
 .ice-cream{
   min-height: 355px;
 }
@@ -195,32 +209,25 @@
 .street{
   min-height: 237px;
 }
+
 .footer{
   display: grid;
-  
-  
-  grid-template-rows: min-content minmax(81vh, 90vh) min-content;
+  grid-template-rows: min-content minmax(81vh, 92vh) min-content;
   padding: 10px;
   align-content: space-between;
-  padding-bottom: 0px;
 }
 
 .footer-title{
-
   align-self: center;
   justify-self: center;
   display: flex;
-  font-family: IBM Plex Mono;
-  font-weight: 700;
-  font-size: 116px;
-  line-height: 95.7px;
-  letter-spacing: 0%;
-  text-shadow: 2px 2px 0px #FF0070;
-  color: #DB00FF;
-  
-
-  
+  font-weight: var(--font-title);
+  font-size: var(--font-size-title);
+  line-height: var(--font-line-height-title);
+  text-shadow: 2px 2px 0px var(--color-shadow);
+  color: var(--title-color); 
 }
+
 .decorated-zone::after{
   content: "";
   display: block;
@@ -228,8 +235,8 @@
   height: 25px;
   border-left: 1px solid var(--color-decor);
   border-bottom: 1px solid var(--color-decor);
-  
 }
+
 .decorated-zone::before{
   content: "";
   display: flex;
@@ -237,10 +244,8 @@
   height: 25px;
   border-top: 1px solid var(--color-decor);
   border-right: 1px solid var(--color-decor);
-  
   justify-self: flex-end;
   align-self: start;
-  
 }
 
 @media (width >= 768px){
@@ -248,29 +253,48 @@
     gap:20px;
   }
   .header{
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+    padding: 0;
+    grid-template-columns: min-content 1fr 1fr min-content;
   }
+  
   .header__theme-menu{
     margin-block-start:148px ;
+    margin-right: 20px;
+    grid-column: 3 / 5;
+    grid-row: 2;
   }
   .header__title{
-    margin-block-start:166px ;
-    font-size: 120px;
-    
+    grid-column: span 3; 
+    grid-row:3; 
+    margin-block-start:166px;
   }
+
   .header__post-title{
-    margin-inline-start:384px ;
+    grid-row:4;
+    grid-column:3 / 5;
+    margin-right: 20px;
     margin-block-start:162px;
     margin-block-end: 138px;
   }
   .decorated-zone::after{
-    margin-inline-start:20px;
+    grid-row:5;
+    grid-column:1;
+    margin-left: 20px;
+
+  }
+  .decorated-zone::before{
+    grid-row: 1;
+    grid-column:4;
+    margin-right:20px;
+    margin-top: 20px;
   }
   .main__content{
     gap:50px;
-    padding-left:30px;
-    
+    padding-left:20px;
+    padding-right: 20px;
   }
+
   .main__section{
     display: grid;
     gap:20px;
@@ -281,15 +305,7 @@
     margin-bottom: 10px;
   }
 
-  .section__content{
-    font-family: IBM Plex Mono;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 23.4px;
-    letter-spacing: 0%;
-    
 
-  }
   .section__uniq{
     display: grid;
     grid-template-rows: repeat(4, min-content);
@@ -314,34 +330,32 @@
   }
   .section__card-list{
     display: grid;
+    width: min-content;
     grid-template-columns: repeat(3, minmax(230px, 315px));
-    grid-template-rows: minmax(192px, 260px) minmax(230px, 315px) minmax(318px, 433px);
+    grid-template-rows: auto minmax(230px, 315px) auto;
     gap: 20px;
     box-sizing: border-box;
     grid-auto-flow: row dense; 
   }
+  
   .section__card-image-title{
     margin-bottom: 0;
+    
   }
   .section__card-image{
     width: 100%;
     min-height: 100%;
-    
   }
 
   .sunset{
     grid-column: span 2;
     grid-row:1;
-    
-    
   }
   .ice-cream{
-    
     grid-row:span 2;
     grid-column: 3;
   }
-  .tape{
-    
+  .tape{ 
     grid-row: span 2;
     grid-column: 1;
   }
@@ -354,36 +368,35 @@
     grid-column: 2;
   }
   .footer{
-    padding-top: 30px;
-    margin-top: 30px;
-    
+    padding: 0;
+    grid-template-rows: min-content 1fr min-content ;
+    grid-template-columns: min-content 1fr min-content;
   }
+
   .footer-title{
+    grid-row: 2;
+    grid-column: span 3;
     justify-self: center;
     align-self: center;
-    font-family: IBM Plex Mono;
-    font-weight: 700;
-    font-size: 120px;
-    line-height: 95.7px;
-    letter-spacing: 0%;
-
-    
-
   }
   
 }
+
 @media(width >= 1024px){
   .page{
     grid-template-rows: min-content min-content min-content;
     gap:50px;
   }
+
   .header{
-    margin-bottom: 10px;
+    
+    margin-bottom: 18px;
     grid-template-rows: repeat(4, min-content);
     grid-template-columns: repeat(4, 1fr);
   }
+
   .header__theme-menu{
-    margin-inline-start: 15px;
+    margin-inline-start: 20px;
     justify-self: center;
     grid-row: 1;
     grid-column: 2 / 4;
@@ -391,62 +404,56 @@
     
   }
   .header__theme-menu-list{
-
-    
     grid-template-rows: min-content;
     grid-template-columns: repeat(3, min-content);
   }
   .header__post-title{
     margin-inline-start: 10px;
     grid-row: 3;
-    margin-block-start:133px ;
+    margin-block-start:115px ;
     grid-column: 3 / 5;
     justify-self: flex-end;
     align-self: end;
     margin-right: 0 ;
     margin-block-end:90px ;
-    
   }
   .header__title{
     width: 100%;
-    margin-block-start:280px ;
+    margin-block-start:265px ;
     grid-column: 1 / 5;
     grid-row: 2;
-    font-size: 157px;
   }
   .decorated-zone::after{
     grid-row: 4;
     margin-top: 10px;
   }
+
   .decorated-zone::before{
     grid-column: 4;
   }
   .footer-title{
-    font-family: IBM Plex Mono;
-    font-weight: 700;
-    font-size: 157px;
-    line-height: 129.53px;
-    letter-spacing: 0%;
     grid-row: 2;
     grid-column: 1 / 4;
     justify-self: center;
     align-self: center ;
     margin-left: 45px;
-    margin-top: 10px;
-    
+   
+
   }
   .main__section{
     gap: 10px;
-    
   }
+
   .section__uniq{
     margin-top: 30px;
     grid-template-columns: 1fr 1fr 1fr; 
   }
+
   .section__list-uniq{
     grid-column: span 3;
     grid-template-columns: 1fr 1fr 1fr;
   }
+
   .section__cards{
     gap:20px;
   }
@@ -455,6 +462,11 @@
     grid-template-columns: 1fr max-content 1fr;
     margin-top: 0;
     padding-top: 30px;
-    
+  }
+  .decorated-zone::after{
+    margin-left: 20px;
+    align-items: flex-start;
+    justify-self: start;
+    margin-top: 0;
   }
 }
