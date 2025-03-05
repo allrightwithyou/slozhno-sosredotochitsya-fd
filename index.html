@@ -7,19 +7,19 @@
     <meta name="color-scheme" content="dark light" />
     <title>Сложно сосредоточиться</title>
     <script src="./scripts/script.js"></script>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="stylesheet" href="./styles/light.css" />
-    <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="icon" href="./images/favicon.ico" sizes="any" />
     <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
   </head>
   <body class="page">
     <header class="header decorated-zone">
-      <p class="rec">Rec</p>
+      <span aria-hidden="true" class="rec">Rec</span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -63,11 +63,16 @@
               важные. Где же легендарная многозадачность, когда она так нужна
               вам (и всем нанимающим менеджерам этого мира)? А дело в том, что
               её просто не существует. Исследователи
-              <a class="link" href="#0">выяснили</a>, что мозгу тяжело
-              концентрироваться даже на двух делах одновременно. А когда в поле
-              внимания попадает несколько важных задач, организм паникует и
-              выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы
-              работаем невнимательно: ошибаемся и быстро устаём.
+              <a
+                class="link"
+                target="_blank"
+                href="https://dana.org/article/multicosts-of-multitasking/"
+                >выяснили</a
+              >, что мозгу тяжело концентрироваться даже на двух делах
+              одновременно. А когда в поле внимания попадает несколько важных
+              задач, организм паникует и выделяет кортизол и адреналин —
+              «гормоны стресса». Из-за этого мы работаем невнимательно:
+              ошибаемся и быстро устаём.
             </p>
           </li>
           <li class="section__card">
@@ -86,7 +91,9 @@
         </ul>
       </section>
       <section class="main__section section__uniq">
-        <h2 class="section__title">Что снижает концентрацию внимания?</h2>
+        <h2 class="section__title section__title-uniq">
+          Что снижает концентрацию внимания?
+        </h2>
         <ul class="section__list section__list-uniq">
           <li class="section__card">
             <h3 class="section__post-title title-decor">Многозадачность</h3>
@@ -124,21 +131,19 @@
           </li>
         </ul>
       </section>
-      <section class="main__section">
+      <section class="main__section double">
         <h2 class="section__title">
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
           секунд)
         </h2>
+        <h3 class="section__post-title title-decor double-title">
+          5 простых (на самом деле не очень) советов
+        </h3>
         <ul class="section__list">
           <li class="section__card">
-            <h3 class="section__post-title title-decor">
-              5 простых (на самом деле не очень) советов
-            </h3>
-          </li>
-          <li class="section__card">
-            <h3 class="section__post-title title-decor not-fat">
+            <h4 class="section__post-title title-decor not-fat">
               Представьте небо и облака
-            </h3>
+            </h4>
             <p class="section__content">
               Или листья в ручье. Тут дело в лёгкой медитации, которая помогает
               успокоиться. Ведь часто именно тревожные мысли о сложных задачах
@@ -151,9 +156,9 @@
             </p>
           </li>
           <li class="section__card">
-            <h3 class="section__post-title title-decor not-fat">
+            <h4 class="section__post-title title-decor not-fat">
               Включите музыку
-            </h3>
+            </h4>
             <p class="section__content">
               Но не любую, и не любимую. Любимая может быть связана с сильными
               положительными эмоциями, которые тоже очень сильно отвлекают.
@@ -162,23 +167,27 @@
             </p>
           </li>
           <li class="section__card">
-            <h3 class="section__post-title title-decor not-fat">
+            <h4 class="section__post-title title-decor not-fat">
               Прогуляйтесь
-            </h3>
+            </h4>
             <p class="section__content">
               Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
-              <a class="link" href="#0">показал</a>, что созерцание природы
-              повышает концентрацию, в то время как после просмотра городских
-              пейзажей она наоборот понижается. Можно совместить прогулку с
-              физическими упражнениями или бегом — так в мозг поступит ещё
-              больше кислорода и он будет лучше работать. Но и простая
-              двадцатиминутная прогулка — тоже отличный вариант.
+              <a
+                class="link"
+                target="_blank"
+                href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328"
+                >показал</a
+              >, что созерцание природы повышает концентрацию, в то время как
+              после просмотра городских пейзажей она наоборот понижается. Можно
+              совместить прогулку с физическими упражнениями или бегом — так в
+              мозг поступит ещё больше кислорода и он будет лучше работать. Но и
+              простая двадцатиминутная прогулка — тоже отличный вариант.
             </p>
           </li>
           <li class="section__card">
-            <h3 class="section__post-title title-decor not-fat">
+            <h4 class="section__post-title title-decor not-fat">
               Хорошо ешьте
-            </h3>
+            </h4>
             <p class="section__content">
               Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
               которые препятствуют резким скачкам сахара в крови. Например, с
@@ -187,7 +196,7 @@
             </p>
           </li>
           <li class="section__card">
-            <h3 class="section__post-title title-decor not-fat">Читайте</h3>
+            <h4 class="section__post-title title-decor not-fat">Читайте</h4>
             <p class="section__content">
               Настоящие бумажные книги. Это правда помогает с концентрацией:
               чтобы прочитать пост в соцсети, достаточно нескольких минут или
@@ -246,7 +255,7 @@
       </section>
     </main>
     <footer class="footer decorated-zone">
-      <h4 class="footer-title">focus</h4>
+      <h5 class="footer-title">focus</h5>
     </footer>
   </body>
 </html>
