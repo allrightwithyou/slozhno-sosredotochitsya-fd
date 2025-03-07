@@ -20,7 +20,6 @@
 .header{
   display: grid;
   grid-template-rows:repeat(5, min-content);
-  height: 100vh;
   min-height: 668px;
   padding: 10px;
 }
@@ -101,7 +100,7 @@
 }
 
 .link:focus-visible{
-  border: 1px solid var(--focus-color);
+  outline: 1px solid var(--focus-color);
 }
 
 .header__theme-menu-button_active{
@@ -299,7 +298,6 @@
 
   .header{
     grid-template-columns: min-content 1fr 1fr min-content;
-    
     padding: 0;
   }
   
@@ -321,7 +319,8 @@
     grid-row:4;
     margin-right: 20px;
     margin-top: 162px;
-   margin-bottom: 140px;
+    margin-bottom: 140px;
+   
   }
 
   .decorated-zone::after{
@@ -338,6 +337,7 @@
   }
 
   .main__content{
+    margin-top: 20px;
     gap:50px;
     padding-right: 20px;
     padding-left:20px;
@@ -403,7 +403,8 @@
     gap: 20px;
     box-sizing: border-box;
     width: calc(100vw - 40px);
-    height: calc(100vh - 245px);
+    min-height: 780px ;
+    height:calc(100vh - 245px) ;
     max-width: 984px;
   }
   
@@ -451,7 +452,7 @@
     grid-template-columns: min-content 1fr min-content;
     grid-template-rows: min-content 1fr min-content ;
     padding: 0;
-    padding-bottom:20px ;
+    height: 100%;
   }
 
   .footer-title{
