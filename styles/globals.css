@@ -39,9 +39,8 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  border: 1px solid transparent;
 }
 :focus{
-  border: none;
+  
   outline: none;
 }
